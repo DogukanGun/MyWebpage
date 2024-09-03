@@ -46,7 +46,7 @@ const BlogCard: React.FC<{ item: Item }> = ({ item }) => (
         </div>
         <div className="bg-white py-6 sm:h-84 lg:h-64 xl:h-72 px-5 xl:py-8">
             <span className="block font-body text-lg font-semibold text-black">{item.title}</span>
-            <span className="block pt-2 font-body text-grey-20">{replaceImageLinks(item?.description)?.texts[0]?.slice(0, 200)} ...</span>
+            <span className="block pt-2 font-body text-grey-20">{replaceImageLinks(item?.description)?.texts?.[0]?.slice(0, 200) ?? ""} ...</span>
         </div>
     </a>
 );
